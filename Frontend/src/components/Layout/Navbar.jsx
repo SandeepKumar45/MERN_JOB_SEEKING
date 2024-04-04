@@ -21,7 +21,7 @@ function Navbar() {
       navigate('/login')
     } catch (error) {
       toast.error(error.response.data.message)
-      dispatch(setIsAuthorized(false))
+      dispatch(setIsAuthorized(true))
     }
   }
   return (
