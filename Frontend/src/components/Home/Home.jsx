@@ -9,7 +9,7 @@ import { Navigate } from 'react-router';
 function Home() {
   const { isAuthorized } = useSelector(state => state.auth)
   if (!isAuthorized) {
-    return <Navigate to={"login"}/>
+    return <Navigate to={"/login"}/>
   }
   return (
     <>
