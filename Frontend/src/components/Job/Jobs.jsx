@@ -10,7 +10,7 @@ function Jobs() {
   const [jobs, setJob] = useState([])
   const { isAuthorized } = useSelector(state => state.auth)
   useEffect(() => {
-    axios.get('http://localhost:4000/api/v1/job/getall',{
+    axios.get('https://mern-job-seeking-ngkz.onrender.com/api/v1/job/getall',{
       withCredentials: true
     }).then((res) => {
       setJob(res.data)

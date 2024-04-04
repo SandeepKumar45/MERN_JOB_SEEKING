@@ -25,7 +25,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault()
     try {
-      const { data } = await axios.post('http://localhost:4000/api/v1/user/register',
+      const { data } = await axios.post('https://mern-job-seeking-ngkz.onrender.com/api/v1/user/register',
         { name, phone, email, role, password },
         {
           headers: {
