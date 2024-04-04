@@ -21,7 +21,7 @@ function PostJob() {
 
   const handleJobPost = (e) => {
     e.preventDefault()
-    axios.post('https://mern-job-seeking-ngkz.onrender.com/api/v1/job/post',
+    axios.post('/api/v1/job/post',
       salaryType === 'Fixed Salary' ?
         ({
           title,

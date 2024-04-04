@@ -19,7 +19,7 @@ function Login() {
   const handleLogin = async(e) => {
     e.preventDefault()
     try {
-      const { data } = await axios.post('https://mern-job-seeking-ngkz.onrender.com/api/v1/user/login',
+      const { data } = await axios.post('/api/v1/user/login',
       { email, password, role },
       {
         headers: {

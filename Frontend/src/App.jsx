@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch()
   const { isAuthorized } = useSelector(state => state.auth)
   useEffect(() => {
-    axios.get('https://mern-job-seeking-ngkz.onrender.com/api/v1/user/getuser',
+    axios.get('/api/v1/user/getuser',
     {withCredentials: true})
       .then((res) => {
         dispatch(setUser(res.data.data))

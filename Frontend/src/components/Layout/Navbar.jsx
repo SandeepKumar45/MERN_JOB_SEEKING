@@ -14,7 +14,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get('https://mern-job-seeking-ngkz.onrender.com/api/v1/user/logout', { withCredentials: true })
+      const response = await axios.get('/api/v1/user/logout', { withCredentials: true })
       toast.success(response.data.message);
       dispatch(setUser(null));
       dispatch(setIsAuthorized(false))
