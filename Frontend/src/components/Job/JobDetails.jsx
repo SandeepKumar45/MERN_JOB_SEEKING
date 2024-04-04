@@ -15,7 +15,7 @@ function JobDetails() {
 
   const getJob = async () => {
     try {
-      const res = await axios.get(`/api/v1/job/${id}`,{withCredentials: true})
+      const res = await axios.get(`https://mern-job-seeking-ngkz.onrender.com/api/v1/job/${id}`,{withCredentials: true})
       setJob(res.data.data)
     } catch (error) {
       return <Navigate to={'/notfound'}/>

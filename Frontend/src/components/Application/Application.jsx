@@ -32,7 +32,7 @@ function Application() {
 
     try {
       const { data } = await axios.post(
-        "/api/v1/application/post",
+        "https://mern-job-seeking-ngkz.onrender.com/api/v1/application/post",
         formData,
         {
           withCredentials: true,

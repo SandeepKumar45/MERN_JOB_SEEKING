@@ -17,7 +17,7 @@ function MyJobs() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const { data } = await axios.get('/api/v1/job/getmyjobs', { withCredentials: true })
+        const { data } = await axios.get('https://mern-job-seeking-ngkz.onrender.com/api/v1/job/getmyjobs', { withCredentials: true })
         setMyJobs(data.data)
       } catch (error) {
         toast.error(error.response.data.message)
@@ -49,7 +49,7 @@ function MyJobs() {
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
-      .put(`/api/v1/job/updatejob/${jobId}`, updatedJob, {
+      .put(`https://mern-job-seeking-ngkz.onrender.com/api/v1/job/updatejob/${jobId}`, updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -64,7 +64,7 @@ function MyJobs() {
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
     await axios
-      .delete(`/api/v1/job/deletejob/${jobId}`, {
+      .delete(`https://mern-job-seeking-ngkz.onrender.com/api/v1/job/deletejob/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {
