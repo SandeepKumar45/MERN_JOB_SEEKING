@@ -84,7 +84,7 @@ export const login = asyncHandler(async (req, res) => {
     const loggedUser = await User.findById(user._id).select("-password")
 
     const options = {
-        httpOnly: false,
+        httpOnly: true,
         secure: true,
         sameSite: "none"
     }
