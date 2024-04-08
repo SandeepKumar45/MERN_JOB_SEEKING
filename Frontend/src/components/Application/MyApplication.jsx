@@ -134,9 +134,9 @@ const JobSeekerCard = ({ element, deleteApplication, openModal }) => {
           <p>
             <span>Address:</span> {element.address}
           </p>
-          <div>
-            <span>CoverLetter:</span> <textarea>{element.coverLetter}</textarea>
-          </div>
+          <p>
+            <span>CoverLetter:</span> <pre>{element.coverLetter}</pre>
+          </p>
         </div>
         <div className="resume">
           <img
