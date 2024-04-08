@@ -43,7 +43,7 @@ getJob()
             Location: <span>{job.location}</span>
           </p>
           <p>
-            Description: <span>{job.description}</span>
+            Description: <pre>{job.description}</pre>
           </p>
           <p>
             Job Posted On: <span>{job.createdAt}</span>
